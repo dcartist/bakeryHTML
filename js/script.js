@@ -5,18 +5,20 @@ let loginButton = document.getElementById('login');
 let signUpButton = document.getElementById('signUp');
 let closeModal = document.getElementById('close');
 let Message = document.getElementById('message')
-var emailValidate = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+var emailValidate = /^[^@]+@\w+(\.\w+)+\w$/
 console.log("test")
 console.log(signUpButton)
 function emailSignUp(e){
     console.log(SignupInput)
 }
 function validateLogin(){
-if (SignupInput.match(emailValidate)){
-    console.log("valid email")
-    console.log()
+let Input = document.getElementById('SignupInput').value;
+if (Input.match(emailValidate)){
+    Message.innerText = "Congrats Your email Works"
 } else {
-    console.log ("not valido")
+    Message.innerText = "I'm sorry your email is invalid"
+    // console.log(Input)
+    // console.log (/^[^@]+@\w+(\.\w+)+\w$/.test(SignupInput))
 }
 }
 signUpButton.onclick = function(){
