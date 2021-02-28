@@ -5,6 +5,18 @@ body {
     background-color: #512e26;
 }
 
+button,
+textarea,
+input,
+select,
+a, 
+input:focus,
+textarea:focus,
+select:focus
+{
+    outline: none;
+}
+
 .appBase {
     display: flex;
     flex-direction: column;
@@ -33,7 +45,7 @@ body {
     font-weight: 500;
     letter-spacing: 1.5px;
 }
-#message{
+#message, #modalMessage{
     margin-top: -5px;
     margin: -5px auto;
     /* letter-spacing: 1.3px; */
@@ -72,6 +84,10 @@ body {
     color: #757575;
     opacity: 0.7;
 }
+.introBackground form input[type=text] {
+    background-color: white;
+    color: #979797b4;
+}
 .introBackground form :-ms-input-placeholder {
     color: #757575;
     opacity: 0.7;
@@ -87,6 +103,7 @@ body {
 .introBackground .loginButton {
     margin: 5px auto;
 }
+/* ---------------------------------- Modal --------------------------------- */
 .introBackground .login {
     z-index: 1125;
     left: 50%;
@@ -128,6 +145,10 @@ body {
     font-size: 16px;
     letter-spacing: 1.4px;
 }
+.introBackground .login input[type=text] {
+    background-color: white;
+    color: #979797b4;
+}
 .introBackground .login button {
     margin-top: 10px;
 }
@@ -140,7 +161,6 @@ body {
     z-index: 50;
     background: rgba(0, 0, 0, 0.6);
 }
-/* ---------------------------------- Modal --------------------------------- */
 .show {
     display: block !important;
 }

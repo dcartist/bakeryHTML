@@ -23,10 +23,11 @@
                             <form>
                       <p>Please enter your email to login </p>
                       <p>
-                      <input type="text" placeholder="Email Address" onChange={props.handleEmailChange}></input>
+                      <input type="text" placeholder="Email Address" id="modalInput"></input>
                       </p>
                     </form>
-                      <button class="smallButton greenBorderButton loginButton" onClick={toggleButton}>Login</button>
+                      <button class="smallButton greenBorderButton loginButton" id="modalLogin">Login</button>
+                       <p id="modalMessage"> &nbsp </p>
                     </div>
                     </div>
                 <!-- End the Modal -->
