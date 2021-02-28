@@ -282,8 +282,12 @@ select:focus
     .about span {
         width: 90%;
         padding: 30px;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
    }
+   .about span img {
+    margin-left: 10px;
+    height: 14px;
+}
     .about input {
         position: absolute;
         opacity: 0;
