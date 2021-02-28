@@ -109,7 +109,7 @@ select:focus
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    width: 500px;
+    width: 400px;
     background: black;
     max-width: 100%;
     padding: 60px;
@@ -143,7 +143,6 @@ select:focus
 }
 .introBackground .login p {
     font-size: 16px;
-    letter-spacing: 1.4px;
 }
 .introBackground .login input[type=text] {
     background-color: white;
@@ -152,6 +151,11 @@ select:focus
 .introBackground .login button {
     margin-top: 10px;
 }
+.introBackground .login #modalLogin {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
 .introBackground .login-overlay {
     position: fixed;
     top: 0;
@@ -285,6 +289,16 @@ select:focus
         opacity: 0;
         z-index: -1;
    }
+
+   /* ---------------------------------- Modal --------------------------------- */
+.introBackground .login {
+    background: black;
+    max-width: 90%;   
+}
+.introBackground .login input{
+    width: 100%;
+    
+}
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) and (max-width: 767px) {
