@@ -35,6 +35,7 @@ body {
 /* ------------------------------ Intro Section ----------------------------- */
  .introBackground {
 	 min-height: 80vh;
+     background-image: url("../images/IMAGE.png");
 	 background-size: cover;
 	 background-repeat: no-repeat;
 	 background-position: right;
