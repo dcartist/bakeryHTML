@@ -297,6 +297,10 @@ select:focus
         z-index: -1;
    }
 
+   .about input:checked ~ .infoSection-content {
+    max-height: 200vh;
+    padding: 1em;
+}
    /* ---------------------------------- Modal --------------------------------- */
 .introBackground .login {
     background: black;
@@ -329,6 +333,10 @@ select:focus
         padding: 30px;
         font-size: 1.4rem;
    }
+   .about input:checked ~ .infoSection-content {
+    max-height: 200vh;
+    padding: 1em;
+}
 }
 /********** * TABLET * **********/
 /* Medium devices (landscape tablets, 768px and up) */
