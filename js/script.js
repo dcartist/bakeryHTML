@@ -5,32 +5,36 @@ let loginButton = document.getElementById('login');
 let signUpButton = document.getElementById('signUp');
 let closeModal = document.getElementById('close');
 let Message = document.getElementById('message')
-var emailValidate = /^[^@]+@\w+(\.\w+)+\w$/
-console.log("test")
-console.log(signUpButton)
+let modalMessage =document.getElementById('modalMessage')
+let modalLogin =document.getElementById('modalLogin')
+let modalInput =document.getElementById('modalInput')
+let emailValidate = /^[^@]+@\w+(\.\w+)+\w$/
+
 function emailSignUp(e){
     console.log(SignupInput)
 }
-function validateLogin(){
-let Input = document.getElementById('SignupInput').value;
-if (Input.match(emailValidate)){
-    Message.innerText = "Congrats Your email Works"
+function validateLogin(info){
+let Input = document.getElementById(info).value;
+if (info == 'SignupInput'){
+    Input.match(emailValidate)? Message.innerText = "Congrats Your email Works" :  Message.innerText = "I'm sorry your email is invalid"
 } else {
-    Message.innerText = "I'm sorry your email is invalid"
-    // console.log(Input)
-    // console.log (/^[^@]+@\w+(\.\w+)+\w$/.test(SignupInput))
+    Input.match(emailValidate)? modalMessage.innerText = "Congrats Your email Works" :  modalMessage.innerText = "I'm sorry your email is invalid"
 }
 }
+
 signUpButton.onclick = function(){
     console.log("click")
-    validateLogin()
+    validateLogin('SignupInput')
 }
 loginButton.onclick = function() {
     Modal.add("show")
     Modal.remove("hide")
   }
 
-  closeModal.onclick = function(){
+closeModal.onclick = function(){
     Modal.add("hide")
     Modal.remove("show")
   }
+modalLogin.onclick = function(){
+     validateLogin('modalInput')
+}

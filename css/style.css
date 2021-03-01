@@ -5,6 +5,18 @@ body {
     background-color: #512e26;
 }
 
+button,
+textarea,
+input,
+select,
+a, 
+input:focus,
+textarea:focus,
+select:focus
+{
+    outline: none;
+}
+
 .appBase {
     display: flex;
     flex-direction: column;
@@ -33,7 +45,7 @@ body {
     font-weight: 500;
     letter-spacing: 1.5px;
 }
-#message{
+#message, #modalMessage{
     margin-top: -5px;
     margin: -5px auto;
     /* letter-spacing: 1.3px; */
@@ -72,6 +84,10 @@ body {
     color: #757575;
     opacity: 0.7;
 }
+.introBackground form input[type=text] {
+    background-color: white;
+    color: #979797b4;
+}
 .introBackground form :-ms-input-placeholder {
     color: #757575;
     opacity: 0.7;
@@ -87,12 +103,13 @@ body {
 .introBackground .loginButton {
     margin: 5px auto;
 }
+/* ---------------------------------- Modal --------------------------------- */
 .introBackground .login {
     z-index: 1125;
     left: 50%;
     transform: translate(-50%, -50%);
     position: fixed;
-    width: 500px;
+    width: 400px;
     background: black;
     max-width: 100%;
     padding: 60px;
@@ -126,11 +143,19 @@ body {
 }
 .introBackground .login p {
     font-size: 16px;
-    letter-spacing: 1.4px;
+}
+.introBackground .login input[type=text] {
+    background-color: white;
+    color: #979797b4;
 }
 .introBackground .login button {
     margin-top: 10px;
 }
+.introBackground .login #modalLogin {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
 .introBackground .login-overlay {
     position: fixed;
     top: 0;
@@ -140,7 +165,6 @@ body {
     z-index: 50;
     background: rgba(0, 0, 0, 0.6);
 }
-/* ---------------------------------- Modal --------------------------------- */
 .show {
     display: block !important;
 }
@@ -185,6 +209,10 @@ body {
     padding: 0 1em;
     background: white;
     transition: all 0.35s;
+}
+.about .infoSection-content div{
+  
+    padding-top: 2em;
 }
 .about input:checked ~ .infoSection-content {
     max-height: 100vh;
@@ -258,13 +286,27 @@ body {
     .about span {
         width: 90%;
         padding: 30px;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
    }
+   .about span img {
+    margin-left: 10px;
+    height: 14px;
+}
     .about input {
         position: absolute;
         opacity: 0;
         z-index: -1;
    }
+
+   /* ---------------------------------- Modal --------------------------------- */
+.introBackground .login {
+    background: black;
+    max-width: 90%;   
+}
+.introBackground .login input{
+    width: 100%;
+    
+}
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 601px) and (max-width: 767px) {
